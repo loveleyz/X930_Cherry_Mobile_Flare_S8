@@ -81,7 +81,11 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
+
+#full treble config
 BOARD_VNDK_VERSION := current
+# BOARD_VNDK_VERSION obsoletes TREBLE_LINKER_NAMESPACES
+PRODUCT_TREBLE_LINKER_NAMESPACES := false
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
