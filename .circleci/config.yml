@@ -59,6 +59,7 @@ jobs:
             repo forall vendor/omni -c "git commit -m 'Fix Build from forked/personal repos'"
             echo -e "\nPreparing Delicious Lunch..."
             export ALLOW_MISSING_DEPENDENCIES=true
+            export LC_ALL="C"
             source build/envsetup.sh
             lunch omni_Flare_S8-eng
             
