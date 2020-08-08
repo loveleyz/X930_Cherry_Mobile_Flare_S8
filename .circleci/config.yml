@@ -80,6 +80,7 @@ jobs:
             cp out/target/product/${CODENAME}/recovery.img upload/OFRP-${version}-${CODENAME}-$nowTime-Unofficial.img
             cp out/target/product/${CODENAME}/*.img upload/
             cp out/target/product/${CODENAME}/ramdisk* upload/
+            cp out/target/product/${CODENAME}/*.zip upload/
             ls -lA upload/
             ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -n "Latest OFRP Release for $(echo $CODENAME)" -b "OFRP $(echo $version)" -delete ofrp_v${version} upload/
 workflows:
