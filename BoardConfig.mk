@@ -98,6 +98,9 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto
 TARGET_DISABLE_TRIPLE_BUFFERING := false
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 
+mkdir -p /home/runner/work/orangefox/out/target/product/yggdrasil/system/etc
+touch /home/runner/work/orangefox/out/target/product/yggdrasil/system/etc/ld.config.txt
+
 ########
 # TWRP #
 ########
