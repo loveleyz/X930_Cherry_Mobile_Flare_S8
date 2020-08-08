@@ -24,7 +24,8 @@ TARGET_NO_BOOTLOADER := true
 
 # Board Platform
 TARGET_BOARD_PLATFORM := mt6763
-BOARD_VNDK_VERSION := current 
+BOARD_VNDK_VERSION := current
+BOARD_VNDK_RUNTIME_DISABLE := false
 
 # Architecture
 TARGET_ARCH := arm64
