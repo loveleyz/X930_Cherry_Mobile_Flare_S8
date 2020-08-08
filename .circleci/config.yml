@@ -31,5 +31,5 @@ workflows:
       - build:
         filters:
           branches:
-             only: "pbrp-9.0"
+             only: 'pbrp-9.0'
           context: personal-envs
