@@ -25,3 +25,12 @@ Sensors | Compass, Ambient Light Sensor, Proximity Sensor and Accelerometer
 ## Device Picture
 
 ![Cherry Mobile Flare S8](https://www.pinoytechnoguide.com/wp-content/uploads/2019/01/Cherry-Mobile-Flare-S8-FULL-IMAGE.jpg)
+
+
+## Build Instructions
+```bash
+export ALLOW_MISSING_DEPENDENCIES=true
+. build/envsetup.sh
+lunch omni_Flare_S8-eng
+mka recoveryimage
+```
