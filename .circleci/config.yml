@@ -82,7 +82,7 @@ jobs:
             cp out/target/product/${CODENAME}/ramdisk* upload/
             cp out/target/product/${CODENAME}/*.zip upload/
             ls -lA upload/
-            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -n "Latest OFRP Release for $(echo $CODENAME)" -b "OFRP $(echo $version)" -delete ofrp_v${version} upload/
+            ghr -t ${GITHUB_TOKEN} -u ${CIRCLE_PROJECT_USERNAME} -r ${CIRCLE_PROJECT_REPONAME} -n "Test OrangeFox Recovery Release for $(echo $CODENAME)" -b "OFRP $(echo $version)" -delete ofrp_v${version} upload/
 workflows:
   version: 2
   build_and_test:
