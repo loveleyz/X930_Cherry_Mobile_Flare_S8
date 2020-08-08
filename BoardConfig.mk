@@ -168,4 +168,3 @@ FOX_VERSION=R11.0
 
 # If build on minimal-manifest sources
 ALLOW_MISSING_DEPENDENCIES=true
-LD_CONFIG_FILE := /sbin/ld.config.txt
