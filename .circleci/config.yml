@@ -62,6 +62,8 @@ jobs:
             export LC_ALL="C"
             source build/envsetup.sh
             lunch omni_Flare_S8-eng
+            mkdir -p /home/builder/orangefox/out/target/product/Flare_S8/system/etc
+            touch /home/builder/orangefox/out/target/product/Flare_S8/system/etc/ld.config.txt
             
             # Keep the whole .repo/manifests folder
             cp -a .repo/manifests $(pwd)/
