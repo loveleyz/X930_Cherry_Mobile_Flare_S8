@@ -28,10 +28,21 @@ jobs:
             git config --global credential.helper store
             git config --global color.ui true
             
+            echo -e "\nSetup Google Cookies for Smooth googlesource Cloning\n"
+            git clone -q "https://$GITHUB_TOKEN@github.com/$GitHubName/google-git-cookies.git" &> /dev/null
+            bash google-git-cookies/setup_cookies.sh
+            rm -rf google-git-cookies
+            
             cd /home/builder/orangefox
             
             echo -e "Initializing minimal manifest repo sync..."
             repo init --depth=1 -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
+            
+            echo -e "\nRemoving Unimportant Darwin-specific Files from syncing"
+            cd .repo/manifests
+            find . -type f -name '*.xml' | xargs sed -i '/darwin/d'
+            git commit -a -m "Magic" || true
+            cd ../ && sed -i '/darwin/d' manifest.xml && cd ../
             
             # Local manifests. Some builds fail if the file path does not exist.
             mkdir -p .repo/local_manifests && cat \<<EOF > .repo/local_manifests/Flare_S8.xml
@@ -53,6 +64,7 @@ jobs:
             repo forall vendor/omni -c "git commit -m 'Fix Build from forked/personal repos'"
             echo -e "\nPreparing Delicious Lunch..."
             export ALLOW_MISSING_DEPENDENCIES=true
+            export LD_CONFIG_FILE /sbin/ld.config.txt
             source build/envsetup.sh
             lunch omni_Flare_S8-eng
             
