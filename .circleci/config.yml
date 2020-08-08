@@ -7,11 +7,11 @@ jobs:
       MANIFEST_BRANCH: "android-9.0"
       # PBRP_BRANCH: '' # OPTIONAL:: If not default 'android-9.0', define other bootable_recovery branch
       VERSION: '3.0.0'
-      MAINTAINER: "Nanik @loveleyz"
-      VENDOR: "Cherry_Mobile"
-      CODENAME: "Flare_S8"
-      FLAVOR: "userdebug"
-      TEST_BUILD: "true"
+      MAINTAINER: 'Nanik @loveleyz'
+      VENDOR: 'Cherry_Mobile'
+      CODENAME: 'Flare_S8'
+      FLAVOR: 'eng
+      TEST_BUILD: 'true'
       # PB_OFFICIAL: "true"
       # EXTRA_CMD: "" # OPTIONAL:: MUST USE DOUBLE-QUOTE
       # PB_ENGLISH: "true" # OPTIONAL:: If you want only English Language
