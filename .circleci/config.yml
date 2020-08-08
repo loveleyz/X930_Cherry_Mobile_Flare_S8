@@ -27,12 +27,7 @@ jobs:
             git config --global user.name $GitHubName
             git config --global credential.helper store
             git config --global color.ui true
-            
-            echo -e "\nSetup Google Cookies for Smooth googlesource Cloning\n"
-            git clone -q "https://$GITHUB_TOKEN@github.com/$GitHubName/google-git-cookies.git" &> /dev/null
-            bash google-git-cookies/setup_cookies.sh
-            rm -rf google-git-cookies
-            
+           
             cd /home/builder/orangefox
             
             echo -e "Initializing minimal manifest repo sync..."
