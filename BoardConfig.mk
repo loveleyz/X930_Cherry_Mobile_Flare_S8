@@ -163,7 +163,9 @@ FOX_VERSION=R11.0
 OF_MAINTAINER=Nanik
 FOX_R11=1
 FOX_ADVANCED_SECURITY=1
-
+#ramdisk compression
+FOX_USE_LZMA_COMPRESSION=1
+LZMA_RAMDISK_TARGETS := recovery
 
 
 # If build on minimal-manifest sources
