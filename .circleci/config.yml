@@ -47,6 +47,8 @@ jobs:
             </manifest>
             EOF
             
+            git clone https://github.com/luka177/android_kernel_volla_mt6763 -b lineage-16.0 kernel/flare_s8/mt6763
+            
             repo sync -c -q --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
             
             # Unshallow vendor_omni
