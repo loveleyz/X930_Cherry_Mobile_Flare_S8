@@ -48,6 +48,8 @@ jobs:
             EOF
             
             repo sync -c -q --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
+
+            git clone --quiet --progress https://github.com/PeterCxy/android_bootable_recovery -b android-9.0 --single-branch bootable/recovery
             
             # Unshallow vendor_omni
             repo forall vendor/omni -c "git fetch --unshallow omnirom android-9.0"
