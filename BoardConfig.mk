@@ -16,6 +16,7 @@
 
 # Basics & Paths
 BOARD_VENDOR := Cherry_Mobile
+LOCAL_PATH := device/Cherry_Mobile/Flare_S8
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := mt6763
@@ -93,7 +94,7 @@ BOARD_AVB_ENABLE := true
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/battery"
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 TARGET_DISABLE_TRIPLE_BUFFERING := false
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
 
@@ -192,7 +193,6 @@ SHRP_FLASH_MAX_BRIGHTNESS := 200
 #recovery Path
 SHRP_REC := /dev/block/platform/bootdevice/by-name/recovery
 SHRP_AB := true
-
 
 # If build on minimal-manifest sources
 ALLOW_MISSING_DEPENDENCIES=true
