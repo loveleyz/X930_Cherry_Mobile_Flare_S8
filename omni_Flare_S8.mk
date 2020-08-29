@@ -1,5 +1,5 @@
 # Release name
-PRODUCT_RELEASE_NAME := X930
+PRODUCT_RELEASE_NAME := Flare_S8
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
