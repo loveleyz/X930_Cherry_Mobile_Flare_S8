@@ -16,7 +16,6 @@
 
 # Basics & Paths
 BOARD_VENDOR := Cherry_Mobile
-LOCAL_PATH := device/Cherry_Mobile/Flare_S8
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := mt6763
