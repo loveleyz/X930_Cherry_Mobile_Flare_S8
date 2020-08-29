@@ -155,5 +155,45 @@ TW_DEFAULT_LANGUAGE := en
 
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 
+#SkyHawk Recovery Project Build Flags
+# NOTE - Dont use '-' or blank spaces in flag values , otherwise it will create build errors or other bugs in recovery (Excluding SHRP_PATH,SHRP_REC). 
+# Path of your SHRP Tree
+SHRP_PATH := device/Cherry_Mobile/Flare_S8
+# Maintainer name *
+SHRP_MAINTAINER := Nanik
+# Device codename *
+SHRP_DEVICE_CODE := Flare_S8
+# Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
+SHRP_REC_TYPE := Treble
+# Recovery Type (It can be A/B or A_only) [Only for About Section] *
+SHRP_DEVICE_TYPE := A/B
+#Rounded Corner
+SHRP_STATUSBAR_RIGHT_PADDING := 40
+SHRP_STATUSBAR_LEFT_PADDING := 40
+#Notch
+SHRP_NOTCH := true
+#theme patching
+SHRP_EXPRESS := true
+#Dark Mode
+SHRP_DARK := true
+#EDL Mode
+SHRP_EDL_MODE := 0
+#Device Path
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usbotg
+#FlashLight
+SHRP_FLASH := 1
+SHRP_CUSTOM_FLASHLIGHT := true
+SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
+SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
+SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
+#Max Brightness of led
+SHRP_FLASH_MAX_BRIGHTNESS := 200
+#recovery Path
+SHRP_REC := /dev/block/platform/bootdevice/by-name/recovery
+SHRP_AB := true
+
+
 # If build on minimal-manifest sources
 ALLOW_MISSING_DEPENDENCIES=true
