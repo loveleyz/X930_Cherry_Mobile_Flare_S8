@@ -31,7 +31,7 @@ jobs:
             cd /home/builder/skyhawk
             
             echo -e "Initializing minimal manifest repo sync..."
-            repo init -u git://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni.git -b android-9.0
+            repo init --depth=1 -u git://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni.git -b android-9.0
             
             echo -e "\nRemoving Unimportant Darwin-specific Files from syncing"
             cd .repo/manifests
