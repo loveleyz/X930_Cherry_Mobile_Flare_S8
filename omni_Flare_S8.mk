@@ -1,8 +1,13 @@
 # Release name
-PRODUCT_RELEASE_NAME := Flare_S8
+PRODUCT_RELEASE_NAME := X930
 
 # Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common_64.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/runtime_libart.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
