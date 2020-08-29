@@ -95,7 +95,7 @@ SHRP_DEVICE_CODE := Flare_S8
 # Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
 SHRP_REC_TYPE := Treble
 # Recovery Type (It can be A/B or A_only) [Only for About Section] *
-SHRP_DEVICE_TYPE := A/B
+SHRP_DEVICE_TYPE := A_only
 #Rounded Corner
 SHRP_STATUSBAR_RIGHT_PADDING := 40
 SHRP_STATUSBAR_LEFT_PADDING := 40
