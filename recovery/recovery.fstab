@@ -38,9 +38,6 @@
 /dev/block/platform/bootdevice/by-name/tee1 /tee1 emmc defaults defaults
 /dev/block/platform/bootdevice/by-name/tee2 /tee2 emmc defaults defaults
 
-/dev/block/platform/bootdevice/by-name/gz1 /scp1 emmc defaults defaults
-/dev/block/platform/bootdevice/by-name/gz2 /scp2 emmc defaults defaults
-
 /dev/block/platform/bootdevice/by-name/sspm_1 /sspm_1 emmc defaults defaults
 /dev/block/platform/bootdevice/by-name/sspm_2 /sspm_2 emmc defaults defaults
 
