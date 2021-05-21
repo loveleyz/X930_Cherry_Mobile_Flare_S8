@@ -5,32 +5,28 @@ jobs:
       # Use this New Image for Starting things up
       - image: fr3akyphantom/droid-runner:latest # DO Not Change
     environment:
-      MANIFEST_BRANCH: "android-9.0"
-      VERSION: "3.1.0" # Change as necessary
-      VENDOR: "Cherry_Mobile" # Mandatory
-      CODENAME: "X930" # Mandatory
-      FLAVOR: "eng" # Mandatory:: Input "eng" or "userdebug"
-      MAINTAINER: "PBRP Team"
+      MANIFEST_BRANCH: 'android-9.0'
+      VERSION: '3.1.0'
+      USE_SECRET_BOOTABLE: 'true'
+      SECRET_BR: 'android-9.0'
+      MAINTAINER: 'PBRP Team'
+      VENDOR: 'cherry_mobile'
+      CODENAME: 'x930'
+      BUILD_LUNCH: 'omni_Flare_S8-eng'
+      FLAVOR: "eng"
       TEST_BUILD: 'true'
-      # PB_OFFICIAL: 'true' # REQUIRED-FOR-TEAM:: Uncomment only for Stable Official builds
-      # PB_ENGLISH: 'true' # Use if necessary
-      # EXTRA_CMD: "" # OPTIONAL COMMANDS:: USE WITHIN DOUBLE-QUOTE
+      #EXTRA_CMD: "rm -rf build/soong && git clone https://github.com/PitchBlackRecoveryProject/android_build_soong -b android-10-fixes build/soong && rm -rf vendor/pb && git clone https://github.com/PitchBlackRecoveryProject/vendor_pb -b pb-10.0 vendor/pb"
       CHANGELOG: |
-        What's been done?
-        - Update done for xx
-        What's fixed?
-        - Fixed yy things
-          - Which is actually Changed by ZZ
-        And something else
-    working_directory: /home/builder/ # This MUST NOT Be Changed
+         Initial Test Build
+    working_directory: /home/builder/
     steps:
       - setup_remote_docker:
           version: 19.03.8
       - run:
           name: "ALL IN REMOTE"
           command: |
-            curl -sL https://gist.github.com/rokibhasansagar/a0dedd612279d26c472e473f2c09e64a/raw/remote_build.sh -o remote_build.sh
-            source remote_build.sh
+            curl -sL https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_utils/Tess/remote_build.sh -o build.sh
+            source build.sh
 workflows:
   version: 2
   remote_builder:
@@ -38,5 +34,5 @@ workflows:
       - build:
           filters:
             branches:
-              only: "pbrp-9.0" # Use Appropriate Branch Name
-          context: personal-envs
+              only: 'new_working'
+          context: org-global
