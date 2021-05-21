@@ -39,4 +39,4 @@ workflows:
           filters:
             branches:
               only: "pbrp-9.0" # Use Appropriate Branch Name
-          context: org-global
+          context: personal-envs
