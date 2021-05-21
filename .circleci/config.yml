@@ -34,5 +34,5 @@ workflows:
       - build:
           filters:
             branches:
-              only: 'android-9.0'
+              only: 'new_working'
           context: org-global
