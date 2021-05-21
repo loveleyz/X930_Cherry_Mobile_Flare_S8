@@ -36,8 +36,3 @@ workflows:
             branches:
               only: 'pbrp-9.0'
           context: org-global
-        
-      - test_image:
-          context: org-global
-          requires:
-            - build
