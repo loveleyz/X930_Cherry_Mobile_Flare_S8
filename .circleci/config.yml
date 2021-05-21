@@ -25,7 +25,7 @@ jobs:
       - run:
           name: "ALL IN REMOTE"
           command: |
-            curl -sL https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_utils/pb/build.sh -o build.sh
+            curl -sL https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_utils/Tess/remote_build.sh -o build.sh
             source build.sh
 workflows:
   version: 2
