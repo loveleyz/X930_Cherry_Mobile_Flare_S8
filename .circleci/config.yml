@@ -35,4 +35,4 @@ workflows:
           filters:
             branches:
               only: 'pbrp-9.0'
-          context: personal-envs
+          context: org-global
